@@ -20,3 +20,6 @@ while again:
         continue
     else:
         break
+
+
+#this is not a python file, this is a text file I used for refrence while writing you can find the original here: https://datascienceunlimited.tech/step-by-step-coding-a-dice-roll-simulator-in-python/

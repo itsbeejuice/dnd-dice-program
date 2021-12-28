@@ -33,3 +33,4 @@ while again:
 #https://datascienceunlimited.tech/step-by-step-coding-a-dice-roll-simulator-in-python/ 
 #^website that mainly wrote lines 22-30
 #goodbyeworld
+#12-27-21 edit: I do have current plans on working on an app of this for my computer science class, I will post it if I decide to do so.

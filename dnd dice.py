@@ -8,7 +8,7 @@ if dice=='two sided die':
 elif dice=="four sided die":
     valmax=4
 elif dice=="six sided die":
-    valmax=4
+    valmax=6
 elif dice=="eight sided die":
     valmax=8
 elif dice=="ten sided die":

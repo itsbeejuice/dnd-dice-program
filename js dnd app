@@ -1,0 +1,75 @@
+var mytenslist= [10,20,30,40,50,60,70,80,90,100];
+
+// states what our minimum number is/will be
+var valmin=1;
+var valmax;
+
+//starts the magic
+onEvent("button1", "click", function( ) {
+  setScreen("menu");
+  onEvent("button6", "click", function( ) {
+    // gives us the ability to count by tens
+    var tenslist=mytenslist[randomNumber(0, 9)];
+    setScreen("fate");
+    setProperty("text_area2", "text", tenslist);
+    afterfate();
+  });
+  onEvent("button7", "click", function( ) {
+    valmax=10;
+    var placeholder=randomNumber(valmin,valmax);
+    setScreen("fate"); 
+    setProperty("text_area2", "text", placeholder);
+    afterfate();
+  });
+  onEvent("button2", "click", function( ) {
+    valmax = 2;
+    var placeholder=randomNumber(valmin,valmax);
+    setScreen("fate"); 
+    setProperty("text_area2", "text", placeholder);
+    afterfate();
+  });
+  onEvent("button3", "click", function( ) {
+    valmax = 4;
+    thedie();
+  });
+  onEvent("button4", "click", function( ) {
+    valmax = 6;
+    thedie();
+  });
+  onEvent("button5", "click", function( ) {
+    valmax = 8;
+    thedie();
+  });
+  onEvent("button8", "click", function( ) {
+    valmax = 20;
+    thedie();
+  });
+  onEvent("button9", "click", function( ) {
+    setScreen("customdie");
+    var customin;
+    onEvent("text_input1", "input", function( ) {
+      customin = getText("text_input1");
+    });
+    var customax;
+    onEvent("text_input2", "input", function( ) {
+      customax = getText("text_input2");
+    });
+    var finalcustom;
+    onEvent("button12", "click", function( ) {
+      finalcustom = randomNumber(customin,customax);
+      setScreen("fate");
+      setProperty("text_area2", "text", finalcustom);
+      afterfate();
+      return finalcustom ; 
+      
+    });
+  });
+});
+
+//makes every basic number work
+function thedie() {
+  var placeholder=randomNumber(valmin,valmax);
+  setScreen("fate"); 
+  setProperty("text_area2", "text", placeholder);
+  afterfate();
+}
